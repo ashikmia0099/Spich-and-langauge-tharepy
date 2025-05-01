@@ -1,5 +1,13 @@
 const config = {
-  plugins: ["@tailwindcss/postcss"],
+  plugins: {
+    "@tailwindcss/postcss": {},
+  },
+  theme: {
+    extend: {
+      fontFamily: {
+        roboto: ['var(--font-roboto)'],
+      },
+    },
+  },
 };
-
 export default config;
