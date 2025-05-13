@@ -90,30 +90,36 @@ function CustomNavbar() {
     const links = (
         <>
 
-            <li className={`xl:text-lg lg:text-[16px] text-lg font-semibold ${isActive('/') ? 'text-[#84C2DB]' : 'text-white'}`}>
+            <li className={`xl:text-lg lg:text-[16px] text-lg font-semibold ${isActive('/') ? 'text-[#84C2DB]' : 'text-black'}`}>
                 <Link href="/">Home</Link>
             </li>
-            <li className={`xl:text-lg lg:text-[16px] text-lg font-semibold relative ${isActive("/components/Services") ? "text-[#84C2DB]" : "text-white"} ${isOpen ? "text-[#84C2DB]" : "text-white"}`}>
+            <li className={`xl:text-lg lg:text-[16px] text-lg font-semibold relative ${isActive("/components/Services") ? "text-[#84C2DB]" : "text-black"} ${isOpen ? "text-[#84C2DB]" : "text-black"}`}>
                 <button onClick={() => setIsOpen(!isOpen)} className="xl:text-lg lg:text-[16px] text-lg font-semibold" >
                     <span>Resources</span> <span> <IoIosArrowDown className={`text-2xl mt-1 transition-transform duration-300 ${isOpen ? "rotate-180" : "rotate-0"}`} /></span>
                 </button>
 
-
             </li>
-            <li className={`xl:text-lg lg:text-[16px] text-lg font-semibold ${isActive('/components/Work') ? 'text-[#84C2DB]' : 'text-white'}`}>
-                <Link href="/components/Work">News & Updates</Link>
+           
+            <li className={`xl:text-lg lg:text-[16px] text-lg font-semibold ${isActive('/components/News') ? 'text-[#84C2DB]' : 'text-black'}`}>
+                <Link href="/components/News">News & Updates</Link>
             </li>
-            <li className={`xl:text-lg lg:text-[16px] text-lg font-semibold ${isActive('/components/Process') ? 'text-[#84C2DB]' : 'text-white'}`}>
-                <Link href="/components/Process">Practics Areas</Link>
+            <li className={`xl:text-lg lg:text-[16px] text-lg font-semibold ${isActive('/components/Gallary') ? 'text-[#84C2DB]' : 'text-black'}`}>
+                <Link href="/components/Gallary">Gallary</Link>
             </li>
-            <li className={`xl:text-lg lg:text-[16px] text-lg font-semibold ${isActive('/components/AboutUs') ? 'text-[#84C2DB]' : 'text-white'}`}>
-                <Link href="/components/AboutUs">Membership</Link>
+            <li className={`xl:text-lg lg:text-[16px] text-lg font-semibold ${isActive('/components/Membership') ? 'text-[#84C2DB]' : 'text-black'}`}>
+                <Link href="/components/Membership">Membership</Link>
             </li>
-            <li className={`xl:text-lg lg:text-[16px] text-lg font-semibold ${isActive('/Homepages/home') ? 'text-[#84C2DB]' : 'text-white'}`}>
-                <Link href="/components/Blogs">About Us</Link>
+            <li className={`xl:text-lg lg:text-[16px] text-lg font-semibold ${isActive('/components/About') ? 'text-[#84C2DB]' : 'text-black'}`}>
+                <Link href="/components/About">About Us</Link>
             </li>
-            <li className={`xl:text-lg lg:text-[16px] text-lg font-semibold ${isActive('/components/Careers') ? 'text-[#84C2DB]' : 'text-white'}`}>
-                <Link href="/components/Careers">Contact</Link>
+            <li className={`xl:text-lg lg:text-[16px] text-lg font-semibold ${isActive('/components/Contact') ? 'text-[#84C2DB]' : 'text-black'}`}>
+                <Link href="/components/Contact">Contact</Link>
+            </li>
+            <li className={`xl:text-lg lg:text-[16px] text-lg font-semibold ${isActive('/components/Details') ? 'text-[#84C2DB]' : 'text-black'}`}>
+                <Link href="/components/Details">Details</Link>
+            </li>
+            <li className={`xl:text-lg lg:text-[16px] text-lg font-semibold ${isActive('/Deshboard') ? 'text-[#84C2DB]' : 'text-black'}`}>
+                <Link href="/Deshboard">Deshboard</Link>
             </li>
 
 
@@ -177,16 +183,16 @@ function CustomNavbar() {
 
 
     return (
-        <div className="sticky top-0 z-40 bg-[#191919]">
-            <div className="navbar max-w-[1596px] h-24 mx-auto bg-gradient-to-r from-[#75adc4] to-[#96b4c0] backdrop-blur-sm">
+        <div className="sticky top-5 z-40 ">
+            <div className="navbar max-w-[1596px] h-24 mx-auto bg-white/60 backdrop-blur-sm rounded-3xl">
                 <div className="navbar-start">
                     <Link href="/">
                         <h1 className="flex items-center gap-2">
                             <span className="text-lg md:text-3xl font-extrabold text-[#A259FF]">
-                                <Image src={ssllogo} className=" h-10 w-10 lg:h-14 lg:w-14"></Image>
+                                <Image src={ssllogo} className=" h-10 w-10 lg:h-14 lg:w-14 rounded-full"></Image>
                             </span>
-                            <span className="font-bold text-[14px] md:text-2xl text-[#FFFDE7] block lg:hidden xl:block">
-                                ALPHA WOLF
+                            <span className="font-bold text-[14px] md:text-2xl text-black block lg:hidden xl:block">
+                               SSLT
                             </span>
                         </h1>
                     </Link>
@@ -200,9 +206,9 @@ function CustomNavbar() {
                     <div className="hidden lg:block px-5 xl:px-0">
 
 
-                        <Link href={"/Auth"}>
-                            <button className="btn text-black bg-[#84C2DB] hover:bg-[#9EFF00]  h-10  xl:h-14 text-lg font-medium border-none shadow-2xs">
-                                <span>Member Login</span> <span> <IoIosArrowDown /></span>
+                        <Link href={"/components/Auth"}>
+                            <button className="btn text-black bg-[#84C2DB] rounded-full h-10 px-5 xl:h-14 text-lg font-medium border-none shadow-2xs">
+                                <span>Member Login</span> 
                             </button>
                         </Link>
 
@@ -229,10 +235,10 @@ function CustomNavbar() {
                                     <div>
                                         <h1 className="flex items-center gap-2">
                                             <span className="text-lg md:text-3xl font-extrabold text-[#A259FF]">
-                                                <Image src={ssllogo} className=" h-10 w-10"></Image>
+                                                <Image src={ssllogo} className=" h-10 w-10 rounded-full"></Image>
                                             </span>
-                                            <span className="font-bold text-[14px] md:text-2xl text-[#FFFDE7]  block">
-                                                ALPHA WOLF
+                                            <span className="font-bold text-[14px] md:text-2xl text-black  block">
+                                                SSLT
                                             </span>
                                         </h1>
                                     </div>
@@ -266,7 +272,7 @@ function CustomNavbar() {
                         transition={{ duration: 0.8, ease: 'easeInOut' }}
                         className="absolute w-full flex justify-center mt-0  z-50"
                     >
-                        <div className="bg-gradient-to-r from-[#75adc4]  to-[#96b4c0] w-full max-w-[1596px] rounded-bl-lg rounded-br-lg">
+                        <div className="bg-white shadow-2xl shadow-[#949494] w-full max-w-[1596px] rounded-bl-lg rounded-br-lg">
                             {/* Content goes here */}
                             <p className="text-white text-2xl">
                                 <Resources></Resources>

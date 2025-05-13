@@ -23,6 +23,7 @@ import doctor1 from '../../../public/ssltimg/doctor1.jpg'
 import doctor2 from '../../../public/ssltimg/doctor2.jpg'
 import doctor3 from '../../../public/ssltimg/doctor3.jpg'
 import WhatDoctorSay from '../WhatDoctorSay/WhatDoctorSay';
+import GlobalCurrentSetution from '../GlobalCurrentSetution/GlobalCurrentSetution';
 
 
 function Banner() {
@@ -125,10 +126,12 @@ function Banner() {
 
     return (
         <div className="max-w-[1596px]  mx-auto ">
+
+
             {/* Text Section */}
             <div className='bg-[url(/images/bannerimg.jpg)]  min-w-full bg-cover bg-no-repeat pb-60'>
-                <h1 className='text-6xl font-bold text-center mx-[20%] pt-20 leading-20'>
-                    THE RIGHT BLEND MAKES <br /> <AuroraText>ALL THE DIFFERENCE.</AuroraText>
+                <h1 className='text-9xl font-bold text-center mx-[20%] pt-20 leading-40'>
+                     <span className=' text-[#84C2DB]'>THE RIGHT BLEND MAKES</span> <br /> <AuroraText>ALL THE DIFFERENCE.</AuroraText>
                 </h1>
                 <p className='text-xl mx-[15%] text-center mt-7 leading-8 font-semibold pb-6'>
                     From Communities to Courses to Podcasts, the right Kajabi blend helps grow your audience, boost engagement, and build revenue. Take the quiz and we’ll help you find your perfect blend.
@@ -137,13 +140,43 @@ function Banner() {
                     className="w-full h-full bg-cover bg-center rounded-xl  bg-[url(/images/heroimages/ssltLogo.jpg)] ">
                 </div>
                 <div className='flex mx-auto justify-center pb-16'>
-                    <InteractiveHoverButton className="bg-[#507886] border-none hover:border-none text-[#AEDBEC] text-xl">
-                        Hover Me
+                    <InteractiveHoverButton className="bg-[#84C2DB] border-none hover:border-none text-[#AEDBEC] text-xl">
+                        Get Membership
                     </InteractiveHoverButton>
                 </div>
             </div>
+            <div className=" overflow-hidden">
+                <div className="absolute  -ml-[300px] -z-0 w-full h-full overflow-hidden">
+                    <svg
+                        className="w-[2500px] h-[878px]"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 2143 878"
+                        fill="none"
+                    >
+                        <path
+                            d="M1465.49 217.927C1323.86 113.574 952.428 70.317 677.582 254.514C457.312 402.135 321.808 688.83 128 749.597M1465.48 217.927C1656.5 353.5 1821.26 652.244 2015.06 713.01"
+                            stroke="url(#paint0_linear_2073_11849)"
+                            strokeWidth="255.385"
+                            strokeLinecap="round"
+                        />
+                        <defs>
+                            <linearGradient
+                                id="paint0_linear_2073_11849"
+                                x1="773.238"
+                                y1="-17.6838"
+                                x2="796.893"
+                                y2="429.298"
+                                gradientUnits="userSpaceOnUse"
+                            >
+                                <stop stopColor="white" />
+                                <stop offset="1" stopColor="white" stopOpacity="0" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
 
-            <div className='bg-gradient-to-b from-[#007797] to-[#75adc4]'  >
+            <div className='bg-gradient-to-b from-[#c9f0ff] to-[#ffffff]'  >
                 <div className='   grid grid-cols-4 gap-10 px-5 '>
                     <div className=' h-[450px] -mt-60 ' data-aos="fade-up">
                         <img src="/ssltimg/doctor1.jpg" className="h-full w-full rounded-xl" alt="Doctor" />
@@ -163,12 +196,24 @@ function Banner() {
                     </div>
                 </div>
 
+
+                {/* global current setution */}
+                <div className=' pt-20'>
+                    <GlobalCurrentSetution></GlobalCurrentSetution>
+                </div>
+
                 {/* What Doctor Say */}
+
+
                 <div>
                     <WhatDoctorSay></WhatDoctorSay>
                 </div>
             </div>
-            
+
+
+
+
+
 
             {/* Bento Grid Section */}
             {/* <BentoGrid>

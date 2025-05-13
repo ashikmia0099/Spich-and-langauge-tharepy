@@ -1,21 +1,12 @@
-// import { Geist, Geist_Mono } from "next/font/google";
+// app/layout.jsx or wherever your layout is located
 import "./globals.css";
 import CustomNavbar from "@/Shared/CustomNavbar";
+import Footer from "@/Shared/Footer";
 import { Roboto } from 'next/font/google';
-
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
 
 const roboto = Roboto({
   subsets: ['latin'],
-  weight: ['400', '700'], // Add more weights if needed
+  weight: ['400', '700'],
   variable: '--font-roboto',
 });
 
@@ -28,10 +19,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={roboto.variable}>
       <body className="antialiased font-roboto">
-        <CustomNavbar />
-        <main>{children}</main>
+        <div className="flex flex-col min-h-screen">
+          <CustomNavbar />
+          <main className="flex-grow">
+            {children}
+          </main>
+          <Footer />
+        </div>
       </body>
     </html>
   );
 }
-
